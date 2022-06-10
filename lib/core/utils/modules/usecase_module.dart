@@ -5,14 +5,14 @@ import 'package:path_project/feature/marvel/domain/usecases/fetch_marvel_charact
 
 Future<void> usecaseModule() async {
   mainBaseGetUsecase = Provider.autoDispose((ref) => MainBaseGet(ref));
-  fetchMarvelCharactersUsecase =
+  fetchMarvelCharactersUsecaseModule =
       Provider.autoDispose((ref) => FetchMarvelCharactersUsecase(ref));
-  fetchMarvelCharacterDetailUsecase =
+  fetchMarvelCharacterDetailUsecaseModule =
       Provider.autoDispose((ref) => FetchMarvelCharacterDetailUsecase(ref));
 }
 
 late final AutoDisposeProvider<MainBaseGet> mainBaseGetUsecase;
 late final AutoDisposeProvider<FetchMarvelCharactersUsecase>
-    fetchMarvelCharactersUsecase;
+    fetchMarvelCharactersUsecaseModule;
 late final AutoDisposeProvider<FetchMarvelCharacterDetailUsecase>
-    fetchMarvelCharacterDetailUsecase;
+    fetchMarvelCharacterDetailUsecaseModule;

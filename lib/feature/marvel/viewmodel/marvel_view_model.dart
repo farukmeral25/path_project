@@ -15,9 +15,10 @@ class MarvelViewModel {
       _fetchMarvelCharacterDetailUsecase;
 
   MarvelViewModel(this.ref)
-      : _fetchMarvelCharactersUsecase = ref.read(fetchMarvelCharactersUsecase),
+      : _fetchMarvelCharactersUsecase =
+            ref.read(fetchMarvelCharactersUsecaseModule),
         _fetchMarvelCharacterDetailUsecase =
-            ref.read(fetchMarvelCharacterDetailUsecase) {
+            ref.read(fetchMarvelCharacterDetailUsecaseModule) {
     ref.read(scrollController).addListener(() {
       if (ref.read(scrollController).position.maxScrollExtent ==
           ref.read(scrollController).position.pixels) {
